@@ -3,7 +3,7 @@ with a few changes to deploy to Google Cloud Managed VMs taken from the example 
 
 * Packaging has been changed to war
 * Added webapp dir with appengine-web.xml and Dockerfile
-* Added an empty web.xml because the gcloud update command insisted there is a web.xml file, that probably won't work
+* Added an empty web.xml because the gcloud update command insisted there is a web.xml file
 
 = Bootstrap UI and JWT Tokens for the Authorization Server
 
