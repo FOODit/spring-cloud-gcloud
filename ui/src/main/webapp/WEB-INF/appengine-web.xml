@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+
+    <application>fit-dev</application>
+    <module>sc-ui</module>
+    <version>1</version>
+
+    <threadsafe>true</threadsafe>
+
+    <beta-settings>
+        <setting name="machine_type" value="n1-standard-1"/>
+        <setting name="java_quickstart" value="true"/>
+    </beta-settings>
+
+    <vm>true</vm>
+    <manual-scaling>
+        <instances>1</instances>
+    </manual-scaling>
+    <network>
+        <instance-tag>frontend-vms</instance-tag>
+    </network>
+
+    <env-variables>
+        <env-var name="DBG_ENABLE" value="1" />
+        <env-var name="DBG_PORT" value="50058" />
+    </env-variables>
+
+</appengine-web-app>
