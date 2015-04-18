@@ -1,26 +1,10 @@
-debug:
-security:
-  user:
-    password: none
-zuul:
-  routes:
-    resource:
-      path: /resource/**
-      url: http://localhost:9000/resource
-    user:
-      path: /user/**
-      url: http://localhost:9999/uaa/user
+
+server:
+  port: 9000
+  contextPath: /resource
+
 spring:
   oauth2:
-    sso:
-      home:
-        secure: false
-        path: /,/**/*.html
-    client:
-      accessTokenUri: http://localhost:9999/uaa/oauth/token
-      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
-      clientId: MicksApp
-      clientSecret: acmesecret
     resource:
       jwt:
         keyValue: |
@@ -30,7 +14,7 @@ spring:
 
 info:
   version: 1.0
-  name: Spring APP UI
+  name: Spring APP Resource
   api: /resource
   profile: default
 

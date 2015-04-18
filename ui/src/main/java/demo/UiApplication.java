@@ -39,11 +39,13 @@ public class UiApplication {
 		public void configure(HttpSecurity http) throws Exception {
 			http.logout().and().antMatcher("/**").authorizeRequests()
 					.antMatchers("/index.html", "/home.html", "/", "/login").permitAll()
-					.anyRequest().authenticated().and().csrf()
-					.csrfTokenRepository(csrfTokenRepository()).and()
-					.addFilterAfter(csrfHeaderFilter(), CsrfFilter.class);
+					.anyRequest().authenticated();
+//			.and().csrf()
+//					.csrfTokenRepository(csrfTokenRepository()).and()
+//					.addFilterAfter(csrfHeaderFilter(), CsrfFilter.class);
 		}
 
+/*
 		private Filter csrfHeaderFilter() {
 			return new OncePerRequestFilter() {
 				@Override
@@ -72,6 +74,7 @@ public class UiApplication {
 			repository.setHeaderName("X-XSRF-TOKEN");
 			return repository;
 		}
+*/
 	}
 
 }
