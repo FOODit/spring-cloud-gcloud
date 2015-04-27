@@ -3,7 +3,7 @@
 
     <application>fit-dev</application>
     <module>sc-ui</module>
-    <version>1</version>
+    <!--<version>1</version>-->
 
     <threadsafe>true</threadsafe>
 
